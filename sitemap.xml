@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://averagedata.kr/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://averagedata.kr/20s.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://averagedata.kr/30s.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://averagedata.kr/40s.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://averagedata.kr/50s.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://averagedata.kr/60s.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://averagedata.kr/top10.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://averagedata.kr/gender-gap.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://averagedata.kr/tenure.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://averagedata.kr/methodology.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://averagedata.kr/about.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://averagedata.kr/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://averagedata.kr/contact.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+</urlset>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>40대 평균 연봉 얼마? | 나이별 연봉 백분위 계산기</title>
+<meta name="description" content="40대 평균 연봉은 약 5,628만 원으로 전 연령대 중 가장 높습니다. 통계청 자료를 기반으로 40대 소득 분포와 내 연봉 위치를 계산해보세요.">
+<link rel="canonical" href="https://averagedata.kr/40s.html">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="wordmark"><span class="mark">%</span>연봉백분위</a>
+    <nav class="primary">
+      <a href="index.html">계산기</a>
+      <a href="30s.html">연령대별 통계</a>
+      <a href="methodology.html">계산 방법</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">40세 ~ 49세 · 생애 소득 정점</div>
+    <h1>40대 평균 연봉은<br><em>약 5,628만 원</em></h1>
+    <p class="lede">40대는 전 연령대를 통틀어 평균소득이 가장 높은 시기입니다. 관리직 비중이 늘고 경력이 최고조에 달하며 생애 소득 곡선의 정점을 찍습니다.</p>
+
+    <div class="calc-card">
+      <form id="calc-form">
+        <div class="calc-grid">
+          <div class="field">
+            <label for="age">나이 (만 나이)</label>
+            <input type="number" id="age" name="age" min="15" max="100" placeholder="예: 45" required>
+          </div>
+          <div class="field">
+            <label for="salary">연 소득 (세전, 만 원)</label>
+            <input type="number" id="salary" name="salary" min="1" placeholder="예: 6000" required>
+          </div>
+        </div>
+        <div class="calc-actions">
+          <button type="submit" class="primary">내 위치 계산하기</button>
+        </div>
+      </form>
+      <div class="result" id="result">
+        <div class="result-headline" id="result-headline"></div>
+        <div class="result-sub" id="result-sub"></div>
+        <div class="curve-wrap"><div id="curve"></div></div>
+        <div class="result-note">계산 방법은 <a href="methodology.html">여기</a>에서 확인하세요.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <h2>40대 소득의 특징</h2>
+    <p>40대는 관리직·임원 승진이 본격화되며 소득 격차가 생애 주기 중 가장 크게 벌어지는 시기입니다. 같은 40대라도 실무직으로 남은 경우와 관리직으로 이동한 경우의 소득 차이가 뚜렷합니다.</p>
+    <p>동시에 이 시기부터 소득만으로는 자산 격차를 따라잡기 어려워지는 경향이 있어, 근로소득 외 자본소득 구조를 함께 준비하는 시기로도 꼽힙니다.</p>
+    <h3>이후를 준비하려면</h3>
+    <p>40대의 소득 정점은 오래가지 않는 경우가 많습니다. 50대 이후의 소득 흐름을 보면, 정점 이후 완만한 하락이 시작되는 만큼 이 시기의 저축·투자 여력을 어떻게 활용하는지가 이후 노후 소득 안정성에 큰 영향을 줍니다.</p>
+    <span class="source-badge">출처: 통계청 「임금근로일자리 소득(보수) 결과」</span>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <h2>다른 연령대도 확인해보세요</h2>
+    <div class="link-grid">
+      <a class="link-card" href="30s.html"><span class="t">30대 평균 연봉</span><span class="d">약 4,764만 원</span></a>
+      <a class="link-card" href="50s.html"><span class="t">50대 평균 연봉</span><span class="d">약 5,340만 원</span></a>
+      <a class="link-card" href="top10.html"><span class="t">연봉 상위 10% 되는 법</span><span class="d">고소득 구간의 특징</span></a>
+      <a class="link-card" href="tenure.html"><span class="t">근속연수별 연봉</span><span class="d">오래 다닐수록 오르는 폭</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="flinks">
+      <a href="about.html">사이트 소개</a>
+      <a href="methodology.html">계산 방법</a>
+      <a href="privacy.html">개인정보처리방침</a>
+      <a href="contact.html">문의</a>
+    </div>
+    <p>본 사이트의 계산 결과는 통계청 공개 통계를 기반으로 한 추정치이며, 개인의 정확한 소득 순위를 보장하지 않습니다.</p>
+  </div>
+</footer>
+
+<script src="js/calculator.js"></script>
+</body>
+</html>

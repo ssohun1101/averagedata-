@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>백분위 계산 방법 및 데이터 출처 | 연봉 백분위 계산기</title>
+<meta name="description" content="연봉 백분위 계산기가 사용하는 통계 출처와 계산 방법(로그정규분포 추정 방식)을 투명하게 공개합니다.">
+<link rel="canonical" href="https://averagedata.kr/methodology.html">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="wordmark"><span class="mark">%</span>연봉백분위</a>
+    <nav class="primary">
+      <a href="index.html">계산기</a>
+      <a href="30s.html">연령대별 통계</a>
+      <a href="methodology.html">계산 방법</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">투명성</div>
+    <h1>계산은 이렇게<br><em>이루어집니다</em></h1>
+    <p class="lede">추정 방식과 한계를 있는 그대로 밝힙니다. 개인별 정확한 순위가 아닌 참고용 지표로 활용해 주세요.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <h2>1. 데이터 출처</h2>
+    <p>연령대별 평균소득은 통계청이 발표하는 「임금근로일자리 소득(보수) 결과」를 기준으로 합니다. 이 통계는 사회보험·직역연금 가입 일자리(약 2,000만 개 이상)의 근로자 소득을 전수에 가깝게 집계하고, 여기에 포함되지 않은 일자리는 국세청 자료를 표본으로 추정해 보완한 결과로, 민간 설문조사 기반 통계보다 신뢰도가 높은 공식 통계입니다.</p>
+
+    <h2>2. 백분위 추정 방법</h2>
+    <p>통계청이 공개하는 자료는 연령대별 <strong>평균소득</strong>과 <strong>중위소득</strong>이며, 개인별 소득 분포 전체(모든 백분위 구간)를 공개하지는 않습니다. 이 때문에 본 사이트는 다음과 같은 방식으로 분포를 추정합니다.</p>
+    <p>소득처럼 하한은 있지만 상한이 없고 오른쪽으로 긴 꼬리를 가지는 데이터는 일반적으로 <strong>로그정규분포</strong>로 근사하는 것이 통계학에서 널리 쓰이는 방법입니다. 통계청이 함께 공개한 전체 근로자의 평균소득과 중위소득의 비율(예: 2023년 기준 평균 363만 원, 중위 278만 원)을 이용해 분포의 폭(로그공간 표준편차)을 역산하고, 이를 각 연령대에 동일하게 적용하여 연령대별 평균소득을 중심으로 한 분포를 만든 뒤, 입력하신 소득이 그 분포에서 차지하는 위치를 백분위로 환산합니다.</p>
+
+    <h2>3. 한계와 유의사항</h2>
+    <p>이 방법은 다음과 같은 한계를 가집니다.</p>
+    <p>· 연령대별로 분포의 폭(격차 정도)이 실제로는 다를 수 있으나, 본 계산기는 편의상 동일한 폭을 가정합니다.<br>
+    · 업종, 기업 규모, 성별, 근속연수 등 소득에 영향을 주는 다른 변수는 반영하지 않습니다.<br>
+    · 세전 소득 기준이며, 비정규직·특수고용·자영업 소득 구조는 반영 범위가 다를 수 있습니다.</p>
+    <p>따라서 계산 결과는 <strong>정확한 개인 순위가 아닌, 대략적인 위치를 가늠하기 위한 참고 지표</strong>로 활용해 주시기 바랍니다.</p>
+    <div class="disclaimer">본 사이트는 통계청 공개 통계를 가공하여 제공하는 개인 운영 정보 서비스이며, 정부 기관이나 공식 통계 서비스와 무관합니다.</div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="flinks">
+      <a href="index.html">계산기</a>
+      <a href="about.html">사이트 소개</a>
+      <a href="privacy.html">개인정보처리방침</a>
+      <a href="contact.html">문의</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>50대 평균 연봉 얼마? | 나이별 연봉 백분위 계산기</title>
+<meta name="description" content="50대 평균 연봉은 약 5,340만 원입니다. 통계청 자료를 기반으로 50대 소득 분포와 내 연봉이 상위 몇 %인지 계산해보세요.">
+<link rel="canonical" href="https://averagedata.kr/50s.html">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="wordmark"><span class="mark">%</span>연봉백분위</a>
+    <nav class="primary">
+      <a href="index.html">계산기</a>
+      <a href="30s.html">연령대별 통계</a>
+      <a href="methodology.html">계산 방법</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">50세 ~ 59세</div>
+    <h1>50대 평균 연봉은<br><em>약 5,340만 원</em></h1>
+    <p class="lede">50대는 40대의 소득 정점을 이어가는 시기지만, 정년을 앞두고 완만한 하락이 함께 나타나는 시기이기도 합니다.</p>
+
+    <div class="calc-card">
+      <form id="calc-form">
+        <div class="calc-grid">
+          <div class="field">
+            <label for="age">나이 (만 나이)</label>
+            <input type="number" id="age" name="age" min="15" max="100" placeholder="예: 54" required>
+          </div>
+          <div class="field">
+            <label for="salary">연 소득 (세전, 만 원)</label>
+            <input type="number" id="salary" name="salary" min="1" placeholder="예: 5800" required>
+          </div>
+        </div>
+        <div class="calc-actions">
+          <button type="submit" class="primary">내 위치 계산하기</button>
+        </div>
+      </form>
+      <div class="result" id="result">
+        <div class="result-headline" id="result-headline"></div>
+        <div class="result-sub" id="result-sub"></div>
+        <div class="curve-wrap"><div id="curve"></div></div>
+        <div class="result-note">계산 방법은 <a href="methodology.html">여기</a>에서 확인하세요.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <h2>50대 소득의 특징</h2>
+    <p>50대 초반까지는 관리직·임원 비중이 높아 소득이 유지되지만, 50대 후반으로 갈수록 명예퇴직·정년퇴직이 늘며 평균을 끌어내리는 경향이 있습니다.</p>
+    <p>같은 50대 안에서도 재직 중인 근로자와 퇴직 후 재취업한 근로자의 소득 차이가 크게 벌어지는 시기로, 연령대 평균만으로는 개인별 상황을 온전히 설명하기 어렵습니다.</p>
+    <h3>60대 이후를 대비하려면</h3>
+    <p>통계청 자료에 따르면 60세 이후 평균소득은 50대 대비 큰 폭으로 낮아집니다. 재취업이나 근로 형태 전환을 고려하고 있다면, 50대에 미리 소득 공백을 메울 자산·연금 구조를 점검해두는 것이 도움이 됩니다.</p>
+    <span class="source-badge">출처: 통계청 「임금근로일자리 소득(보수) 결과」</span>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <h2>다른 연령대도 확인해보세요</h2>
+    <div class="link-grid">
+      <a class="link-card" href="40s.html"><span class="t">40대 평균 연봉</span><span class="d">약 5,628만 원 (최고)</span></a>
+      <a class="link-card" href="top10.html"><span class="t">연봉 상위 10% 되는 법</span><span class="d">고소득 구간의 특징</span></a>
+      <a class="link-card" href="gender-gap.html"><span class="t">남녀 연봉 격차</span><span class="d">성별 평균소득 비교</span></a>
+      <a class="link-card" href="tenure.html"><span class="t">근속연수별 연봉</span><span class="d">오래 다닐수록 오르는 폭</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="flinks">
+      <a href="about.html">사이트 소개</a>
+      <a href="methodology.html">계산 방법</a>
+      <a href="privacy.html">개인정보처리방침</a>
+      <a href="contact.html">문의</a>
+    </div>
+    <p>본 사이트의 계산 결과는 통계청 공개 통계를 기반으로 한 추정치이며, 개인의 정확한 소득 순위를 보장하지 않습니다.</p>
+  </div>
+</footer>
+
+<script src="js/calculator.js"></script>
+</body>
+</html>
