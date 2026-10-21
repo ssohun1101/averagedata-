@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>퇴직금 계산기 | 평균임금 재직일수 자동 계산</title>
+<meta name="description" content="입사일과 퇴사일, 최근 3개월 급여로 예상 퇴직금을 계산하는 퇴직금 계산기. 상여금·연차수당 반영, 지급 조건과 계산식 설명 포함.">
+<link rel="canonical" href="https://averagedata.kr/severance.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="연봉백분위">
+<meta property="og:title" content="퇴직금 계산기 | 평균임금 재직일수 자동 계산">
+<meta property="og:description" content="입사일과 퇴사일, 최근 3개월 급여로 예상 퇴직금을 계산하는 퇴직금 계산기. 상여금·연차수당 반영, 지급 조건과 계산식 설명 포함.">
+<meta property="og:url" content="https://averagedata.kr/severance.html">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#14213D">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2314213D'/%3E%3Ctext x='32' y='46' font-size='40' text-anchor='middle' fill='%23C89B3C' font-family='serif' font-weight='700'%3E%25%3C/text%3E%3C/svg%3E">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9392331544365956" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.tool-tabs{display:flex;gap:8px;margin:0 0 20px;flex-wrap:wrap}
+.tool-tabs a{padding:9px 16px;border:1px solid #d9d3c3;border-radius:999px;text-decoration:none;color:#14213D;font-size:15px}
+.tool-tabs a.on{background:#14213D;color:#fff;border-color:#14213D}
+
+.net-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:15px}
+.net-table th,.net-table td{padding:10px 8px;border-bottom:1px solid #e4dfd2;text-align:right}
+.net-table th:first-child,.net-table td:first-child{text-align:left}
+.net-table th{background:#f3efe4;font-weight:600}
+.table-scroll{overflow-x:auto}
+.faq h3{margin-top:22px}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="wordmark"><span class="mark">%</span>연봉백분위</a>
+    <nav class="primary">
+      <a href="index.html">계산기</a>
+      <a href="salary-net.html">계산 도구</a>
+      <a href="30s.html">연령대별 통계</a>
+      <a href="methodology.html">계산 방법</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="tool-tabs"><a href="salary-net.html">연봉 실수령액</a><a href="wage-convert.html">월급·시급 변환</a><a href="severance.html" class="on">퇴직금 계산</a></div>
+    <div class="eyebrow">퇴직금</div>
+    <h1><em>퇴직금</em> 계산기</h1>
+    <p class="lede">입사일·퇴사일과 최근 3개월 급여만 넣으면 평균임금 방식으로 예상 퇴직금을 계산합니다.</p>
+    <div class="calc-card">
+      <form id="f">
+        <div class="calc-grid">
+          <div class="field"><label for="d1">입사일</label><input type="date" id="d1" required></div>
+          <div class="field"><label for="d2">퇴사일</label><input type="date" id="d2" required></div>
+          <div class="field"><label for="p3">최근 3개월 급여 총액 (원, 세전)</label><input type="number" id="p3" min="1" required placeholder="예: 9000000"></div>
+          <div class="field"><label for="bn">연간 상여금 (원)</label><input type="number" id="bn" min="0" value="0"></div>
+          <div class="field"><label for="lv">연차수당 (원, 전년도 발생분)</label><input type="number" id="lv" min="0" value="0"></div>
+        </div>
+        <div class="calc-actions"><button type="submit" class="primary">퇴직금 계산하기</button></div>
+      </form>
+      <div class="result" id="out"><div class="result-headline" id="oh"></div><div class="result-sub" id="os"></div><div class="result-note">세전 금액이며, 실제 지급 시 퇴직소득세가 원천징수됩니다.</div></div>
+    </div>
+  </div>
+</section>
+<section class="block"><div class="wrap">
+<h2>퇴직금 계산 방법</h2>
+<p>퇴직금은 1일 평균임금에 30일을 곱한 뒤 재직일수를 365로 나눈 값으로 계산합니다. 식으로 쓰면 퇴직금 = 1일 평균임금 × 30일 × (재직일수 ÷ 365)입니다.</p>
+<h3>1일 평균임금</h3>
+<p>퇴직하기 직전 3개월 동안 받은 임금 총액을 그 기간의 총일수(보통 89~92일)로 나눈 값입니다. 연간 상여금은 3/12, 연차수당은 3/12을 더해 총액에 포함합니다.</p>
+<h3>받을 수 있는 조건</h3>
+<p>계속 근로한 기간이 1년 이상이고, 1주 소정근로시간이 평균 15시간 이상이면 퇴직금을 받을 수 있습니다. 이 계산기는 재직일수가 365일 미만이면 대상이 아니라고 안내합니다.</p>
+<h2>자주 묻는 질문</h2>
+<h3>퇴직금과 퇴직연금(DC·DB)은 다른가요?</h3><p>퇴직연금에 가입돼 있으면 회사가 금융기관에 적립한 금액을 받습니다. DB형은 이 계산과 비슷하고, DC형은 운용 수익에 따라 금액이 달라집니다.</p>
+<h3>퇴직금에서 세금은 얼마나 빠지나요?</h3><p>퇴직소득세가 원천징수되며 근속연수가 길수록 공제가 커집니다. 세후 월급은 <a href="salary-net.html">실수령액 계산기</a>로 확인하세요.</p>
+<p style="color:#6b6b6b;font-size:14px">본 계산은 근로기준법의 일반 원칙에 따른 추정이며 개별 사안은 고용노동부(국번없이 1350)에 문의하세요. 최종 업데이트: 2026년 10월</p>
+</div></section>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="flinks">
+      <a href="salary-net.html">실수령액 계산기</a>
+      <a href="about.html">사이트 소개</a>
+      <a href="methodology.html">계산 방법</a>
+      <a href="privacy.html">개인정보처리방침</a>
+      <a href="contact.html">문의</a>
+    </div>
+    <p>본 사이트의 계산 결과는 공개된 요율과 세법을 기반으로 한 추정치이며, 실제 급여와 다를 수 있습니다.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+var f=function(n){return Math.round(n).toLocaleString('ko-KR');};
+var D=86400000;
+document.getElementById('f').addEventListener('submit',function(e){
+ e.preventDefault();
+ var a=new Date(document.getElementById('d1').value),b=new Date(document.getElementById('d2').value);
+ var days=Math.round((b-a)/D)+1;
+ var out=document.getElementById('out'),oh=document.getElementById('oh'),os=document.getElementById('os');out.classList.add('show');
+ if(!(days>0)){oh.textContent='퇴사일이 입사일보다 빠릅니다';os.textContent='';return;}
+ if(days<365){oh.textContent='재직 '+days+'일 · 퇴직금 지급 대상 아님(1년 미만)';os.textContent='계속 근로 1년 이상이어야 법정 퇴직금이 발생합니다.';return;}
+ var end=new Date(b.getTime()+D),start=new Date(end);start.setMonth(start.getMonth()-3);
+ var d3=Math.round((end-start)/D);
+ var tot=+document.getElementById('p3').value+(+document.getElementById('bn').value)*3/12+(+document.getElementById('lv').value)*3/12;
+ var avg=tot/d3,sev=avg*30*days/365;
+ oh.textContent='예상 퇴직금 약 '+f(sev)+'원';
+ os.textContent='재직 '+days+'일('+(days/365).toFixed(1)+'년) · 1일 평균임금 약 '+f(avg)+'원 · 최근 3개월 '+d3+'일 기준';
+});
+})();
+</script>
+</body>
+</html>

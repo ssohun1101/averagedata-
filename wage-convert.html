@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>월급 시급 변환 계산기 | 주휴수당 포함 2026</title>
+<meta name="description" content="월급을 시급으로, 시급을 월급으로 바꿔주는 계산기. 주휴수당 포함 월 209시간 기준과 2026년 최저시급(10,320원) 비교까지 한 번에 확인하세요.">
+<link rel="canonical" href="https://averagedata.kr/wage-convert.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="연봉백분위">
+<meta property="og:title" content="월급 시급 변환 계산기 | 주휴수당 포함 2026">
+<meta property="og:description" content="월급을 시급으로, 시급을 월급으로 바꿔주는 계산기. 주휴수당 포함 월 209시간 기준과 2026년 최저시급(10,320원) 비교까지 한 번에 확인하세요.">
+<meta property="og:url" content="https://averagedata.kr/wage-convert.html">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#14213D">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2314213D'/%3E%3Ctext x='32' y='46' font-size='40' text-anchor='middle' fill='%23C89B3C' font-family='serif' font-weight='700'%3E%25%3C/text%3E%3C/svg%3E">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9392331544365956" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.tool-tabs{display:flex;gap:8px;margin:0 0 20px;flex-wrap:wrap}
+.tool-tabs a{padding:9px 16px;border:1px solid #d9d3c3;border-radius:999px;text-decoration:none;color:#14213D;font-size:15px}
+.tool-tabs a.on{background:#14213D;color:#fff;border-color:#14213D}
+
+.net-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:15px}
+.net-table th,.net-table td{padding:10px 8px;border-bottom:1px solid #e4dfd2;text-align:right}
+.net-table th:first-child,.net-table td:first-child{text-align:left}
+.net-table th{background:#f3efe4;font-weight:600}
+.table-scroll{overflow-x:auto}
+.faq h3{margin-top:22px}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="wordmark"><span class="mark">%</span>연봉백분위</a>
+    <nav class="primary">
+      <a href="index.html">계산기</a>
+      <a href="salary-net.html">계산 도구</a>
+      <a href="30s.html">연령대별 통계</a>
+      <a href="methodology.html">계산 방법</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="tool-tabs"><a href="salary-net.html">연봉 실수령액</a><a href="wage-convert.html" class="on">월급·시급 변환</a><a href="severance.html">퇴직금 계산</a></div>
+    <div class="eyebrow">월급 ↔ 시급</div>
+    <h1>월급·시급 <em>변환</em> 계산기</h1>
+    <p class="lede">주휴수당을 포함한 월 환산 시간으로 월급, 시급, 연봉을 서로 바꿔 드립니다.</p>
+    <div class="calc-card">
+      <form id="f">
+        <div class="calc-grid">
+          <div class="field"><label for="mode">변환 방향</label>
+            <select id="mode"><option value="m">월급 → 시급</option><option value="h">시급 → 월급</option><option value="y">연봉 → 월급·시급</option></select></div>
+          <div class="field"><label for="amt" id="amtl">월급 (원)</label><input type="number" id="amt" min="1" required placeholder="예: 2500000"></div>
+          <div class="field"><label for="wk">주 근로시간</label><input type="number" id="wk" min="1" max="52" value="40"></div>
+        </div>
+        <div class="calc-actions"><button type="submit" class="primary">변환하기</button></div>
+      </form>
+      <div class="result" id="out"><div class="result-headline" id="oh"></div><div class="result-sub" id="os"></div><div class="result-note">주 15시간 이상 근무하면 주휴수당이 포함된 시간으로 계산합니다.</div></div>
+    </div>
+  </div>
+</section>
+<section class="block"><div class="wrap">
+<h2>월급과 시급은 어떻게 바뀌나요?</h2>
+<p>월급을 시급으로 바꿀 때는 한 달 동안 급여를 받는 시간으로 나눕니다. 주 40시간 근무라면 일한 시간 160시간 안팎에 하루치 유급 휴일인 주휴시간이 더해져 월 약 209시간이 기준이 됩니다. 이 계산기는 주 근로시간 기준으로 월 환산 시간을 [(주 근로시간 + 주휴시간) × 365 ÷ 7 ÷ 12]로 구합니다.</p>
+<h3>주휴수당이란</h3>
+<p>1주 15시간 이상 일하고 소정 근로일을 개근한 근로자에게 하루치 임금을 유급으로 주는 제도입니다. 주 40시간이면 주휴시간은 8시간이고, 주 15~40시간 근무자는 주 근로시간을 5로 나눈 값이 주휴시간입니다.</p>
+<h3>2026년 최저시급 확인</h3>
+<p>2026년 최저시급은 10,320원입니다. 주 40시간 월 209시간 기준 환산 월급은 약 2,156,880원이며, 내 시급이 이보다 낮으면 최저임금 미달일 수 있습니다. 정확한 판단은 고용노동부나 노무사에게 확인하세요.</p>
+<h2>자주 묻는 질문</h2>
+<h3>연봉에서 바로 시급을 구하려면?</h3><p>'연봉 → 월급·시급'을 선택하면 연봉을 12로 나눈 월급과 환산 시급을 함께 보여줍니다. 실제 받는 돈이 궁금하면 <a href="salary-net.html">실수령액 계산기</a>를 이용하세요.</p>
+<h3>상여금이 있으면 어떻게 하나요?</h3><p>매월 정기적으로 지급되는 상여금은 통상임금에 포함될 수 있어 월 급여에 더해 계산하는 편이 맞습니다.</p>
+<p style="color:#6b6b6b;font-size:14px">최종 업데이트: 2026년 10월 · 최저시급 출처: 고용노동부 최저임금위원회</p>
+</div></section>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="flinks">
+      <a href="salary-net.html">실수령액 계산기</a>
+      <a href="about.html">사이트 소개</a>
+      <a href="methodology.html">계산 방법</a>
+      <a href="privacy.html">개인정보처리방침</a>
+      <a href="contact.html">문의</a>
+    </div>
+    <p>본 사이트의 계산 결과는 공개된 요율과 세법을 기반으로 한 추정치이며, 실제 급여와 다를 수 있습니다.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+var f=function(n){return Math.round(n).toLocaleString('ko-KR');};
+var mode=document.getElementById('mode'),lab=document.getElementById('amtl');
+mode.addEventListener('change',function(){lab.textContent={m:'월급 (원)',h:'시급 (원)',y:'연봉 (원)'}[mode.value];});
+function hours(w){var hol=w>=15?Math.min(w,40)/5:0;return (w+hol)*365/7/12;}
+document.getElementById('f').addEventListener('submit',function(e){
+ e.preventDefault();var a=+document.getElementById('amt').value,w=+document.getElementById('wk').value,H=hours(w),m,h;
+ if(mode.value==='m'){m=a;h=a/H;}else if(mode.value==='h'){h=a;m=a*H;}else{m=a/12;h=m/H;}
+ document.getElementById('oh').textContent='시급 약 '+f(h)+'원 · 월급 약 '+f(m)+'원';
+ document.getElementById('os').textContent='월 환산 근로시간 '+H.toFixed(1)+'시간(주휴 포함) · 연봉 약 '+f(m*12)+'원 · 2026 최저시급 10,320원 '+(h>=10320?'이상':'미만');
+ document.getElementById('out').classList.add('show');});
+})();
+</script>
+</body>
+</html>
