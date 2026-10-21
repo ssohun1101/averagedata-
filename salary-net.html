@@ -28,6 +28,9 @@
 .net-table th{background:#f3efe4;font-weight:600}
 .table-scroll{overflow-x:auto}
 .faq h3{margin-top:22px}
+.opt{margin:14px 0 4px}
+.opt summary{cursor:pointer;color:#14213D;font-size:15px;padding:6px 0}
+.field small{display:block;color:#6b6b6b;font-size:13px;margin-top:4px}
 </style>
 </head>
 <body>
@@ -58,19 +61,27 @@
             <label for="annual">세전 연봉 (만 원)</label>
             <input type="number" id="annual" min="1" placeholder="예: 4000" required>
           </div>
-          <div class="field">
-            <label for="meal">월 비과세 식대 (원)</label>
-            <input type="number" id="meal" min="0" value="200000">
-          </div>
-          <div class="field">
-            <label for="household">부양가족 수 (본인 포함)</label>
-            <input type="number" id="household" min="1" max="10" value="1">
-          </div>
-          <div class="field">
-            <label for="children">8~20세 자녀 수</label>
-            <input type="number" id="children" min="0" max="9" value="0">
-          </div>
         </div>
+        <details class="opt">
+          <summary>상세 옵션 (식대 · 부양가족 · 자녀) — 모르면 그대로 두세요</summary>
+          <div class="calc-grid">
+            <div class="field">
+              <label for="meal">월 비과세 식대 (원)</label>
+              <input type="number" id="meal" min="0" value="200000">
+              <small>급여명세서에 식대가 있으면 20만 원, 없으면 0</small>
+            </div>
+            <div class="field">
+              <label for="household">부양가족 수 (본인 포함)</label>
+              <input type="number" id="household" min="1" max="10" value="1">
+              <small>혼자라면 1</small>
+            </div>
+            <div class="field">
+              <label for="children">8~20세 자녀 수</label>
+              <input type="number" id="children" min="0" max="9" value="0">
+              <small>해당 나이 자녀가 없으면 0</small>
+            </div>
+          </div>
+        </details>
         <div class="calc-actions">
           <button type="submit" class="primary">실수령액 계산하기</button>
         </div>
